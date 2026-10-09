@@ -31,3 +31,9 @@ The displayed stress, vigour, leaf color and droop are deterministic demonstrati
 ## Future integration
 
 `src/services` isolates data transport and `src/simulation` isolates the visual response logic, allowing a future FastAPI/PyTorch/BioPython-backed validated biological module without coupling it to the renderer. Research and omics fields remain intentionally unpopulated until traceable experimental datasets are integrated.
+
+## Ideathon gene-to-twin workflow
+
+The **Candidate gene → digital-twin scenario** panel adds a source-linked candidate selector, a hypothetical intervention record, and a baseline-versus-modified view with the same growth stage and environmental inputs. Creating a scenario switches the existing candidate profile; it does not alter morphology or claim an edit outcome.
+
+Typed integration contracts are in `src/types/integrations.ts` for GNN predictions, perturbation results, COBRApy fluxes, and APSIM outputs. The current panel reports those adapters as **pending** (or an explicitly labelled demo adapter) until versioned, validated team-model outputs are supplied. Candidate annotations are in `src/data/geneCatalog.ts`, together with linked literature references.
